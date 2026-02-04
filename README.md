@@ -55,9 +55,7 @@ Configure your environment variables:
         never commit)**
     -   `USDC_CONTRACT_ADDRESS` -- USDC contract on Sepolia
     -   `EURC_CONTRACT_ADDRESS` -- EURC contract on Sepolia
-```markdown
-- `MOLTBOOK_API_KEY` -- API key for your Moltbook agent (optional, only required for posting to Moltbook)
-```
+    -   `MOLTBOOK_API_KEY` -- API key for your Moltbook agent (optional, only required for posting to Moltbook)
 
 > Note: `.env` is ignored by `.gitignore` so secrets will not be pushed
 > to GitHub.
