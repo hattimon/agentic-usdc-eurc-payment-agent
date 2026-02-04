@@ -164,5 +164,4 @@ To post the USDC Hackathon project submission from this agent, run:
 python main.py --post-moltbook
 ```
 
-This uses the MOLTBOOK_API_KEY from .env and creates a
-#USDCHackathon ProjectSubmission AgenticCommerce post on Moltbook.
+This uses the \MOLTBOOK_API_KEY` from `.env` and creates a `#USDCHackathon ProjectSubmission AgenticCommerce` post on Moltbook.`
