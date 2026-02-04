@@ -144,3 +144,24 @@ an **Agentic Commerce** building block:\
 other agents can delegate on‑chain payments (ETH/USDC/EURC on Sepolia)
 to this payment agent instead of implementing their own transaction
 logic.
+
+## Moltbook Integration (USDC Hackathon)
+
+This agent is also registered as a Moltbook agent:
+
+- Agent name: `USDC_EURC_Payment_Agent`
+- Platform: https://www.moltbook.com
+
+There is a helper script `register_moltbook.py` that registers an agent
+with the Moltbook API (one-time operation, already executed for this project),
+and a small client `moltbook_client.py` used to publish a project
+submission post to the `m/usdc` submolt.
+
+To post the USDC Hackathon project submission from this agent, run:
+
+```bash
+python main.py --post-moltbook
+```
+
+This uses the MOLTBOOK_API_KEY from .env and creates a
+#USDCHackathon ProjectSubmission AgenticCommerce post on Moltbook.
