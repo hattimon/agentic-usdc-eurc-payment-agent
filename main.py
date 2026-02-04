@@ -4,6 +4,7 @@ from decimal import Decimal
 
 from dotenv import load_dotenv
 from web3 import Web3
+from moltbook_client import post_to_moltbook, PROJECT_TITLE, PROJECT_BODY
 
 load_dotenv()
 
@@ -14,9 +15,9 @@ USDC_CONTRACT_ADDRESS = os.getenv("USDC_CONTRACT_ADDRESS")
 EURC_CONTRACT_ADDRESS = os.getenv("EURC_CONTRACT_ADDRESS")
 
 USDC_DECIMALS = 6
-EURC_DECIMALS = 6  # EURC on Ethereum Sepolia also uses 6 decimal places[web:72][web:74]
+EURC_DECIMALS = 6  # EURC on Ethereum Sepolia also uses 6 decimal places
 
-# Chain ID for Ethereum Sepolia[web:103][web:104][web:110]
+# Chain ID for Ethereum Sepolia
 SEPOLIA_CHAIN_ID = 11155111
 
 w3 = Web3(Web3.HTTPProvider(ALCHEMY_SEPOLIA_URL))
@@ -41,7 +42,7 @@ def get_eth_balance(address: str) -> Decimal:
 
 
 def erc20_abi():
-    # Minimal ABI for balanceOf, transfer, decimals, symbol – shared between USDC and EURC[web:64][web:76]
+    # Minimal ABI for balanceOf, transfer, decimals, symbol – shared between USDC and EURC
     return [
         {
             "constant": True,
@@ -225,6 +226,7 @@ def main():
         print("  python main.py send-eth <TO_ADDRESS> <AMOUNT_ETH>")
         print("  python main.py send-usdc <TO_ADDRESS> <AMOUNT_USDC>")
         print("  python main.py send-eurc <TO_ADDRESS> <AMOUNT_EURC>")
+        print("  python main.py post-moltbook")
         sys.exit(0)
 
     cmd = sys.argv[1]
@@ -290,6 +292,14 @@ def main():
             sys.exit(1)
         tx_hash = send_eurc(to_addr, amount)
         print("Check the transaction on Sepolia Etherscan using this hash.")
+
+    elif cmd == "post-moltbook":
+        try:
+            resp = post_to_moltbook("usdc", PROJECT_TITLE, PROJECT_BODY)
+            print("Posted to Moltbook m/usdc.")
+            print("Response:", resp)
+        except Exception as e:
+            print("Failed to post to Moltbook:", e)
 
     else:
         print(f"Unknown command: {cmd}")
