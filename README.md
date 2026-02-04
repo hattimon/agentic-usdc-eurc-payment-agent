@@ -126,7 +126,7 @@ Example test transactions executed by this agent:
     `fd743b04fa0fd6f200b31b3a7bf31868dc6ffb5efdbc988c175b1ba6eac2dcce`
 -   USDC transfer:
     `96cf6bdf5e0b99a90e4ad0adba562c8c11feb0bf90bc8a58649019fbcf14d7f6`
--   EURC transfer: `<paste your EURC tx hash here>`
+-   EURC transfer: `0x020cfcd3708ee4e71d00b9acefff7d0663a5f0bec09363f375977950302fd5a6`
 
 You can verify them on:\
 https://sepolia.etherscan.io
