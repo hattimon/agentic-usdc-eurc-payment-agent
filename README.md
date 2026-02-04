@@ -123,9 +123,9 @@ All transactions are sent on **Ethereum Sepolia** using EIP‑1559 fields
 Example test transactions executed by this agent:
 
 -   ETH transfer:
-    `fd743b04fa0fd6f200b31b3a7bf31868dc6ffb5efdbc988c175b1ba6eac2dcce`
+    `0xfd743b04fa0fd6f200b31b3a7bf31868dc6ffb5efdbc988c175b1ba6eac2dcce`
 -   USDC transfer:
-    `96cf6bdf5e0b99a90e4ad0adba562c8c11feb0bf90bc8a58649019fbcf14d7f6`
+    `0x96cf6bdf5e0b99a90e4ad0adba562c8c11feb0bf90bc8a58649019fbcf14d7f6`
 -   EURC transfer: `0x020cfcd3708ee4e71d00b9acefff7d0663a5f0bec09363f375977950302fd5a6`
 
 You can verify them on:\
